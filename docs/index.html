@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tranzzo</title>
+    <script src="https://gcdn.tranzzo.com/widget/payment-widget.js"></script>
 </head>
+
 <body>
-    <h1>Tranzzo test page</h1>
+
+    <script>
+        PaymentWidget.init({
+            apiKey: 'VFJFQDJFMRO7Y3IUF5N0VZ9YYDYMWK5O54A1',
+            mode: 'popup',
+            payment: {
+                type: 'pay',
+                amount: 2,
+                currency: 'XTS',
+                serverUrl: 'https://0911-193-28-84-34.ngrok-free.app/payment/webhook',
+                orderId: '2fbb5c7f-4579-4d6d-8ad9-ab6c8c2babd7'
+            }
+        });
+    </script>
 </body>
+
 </html>
